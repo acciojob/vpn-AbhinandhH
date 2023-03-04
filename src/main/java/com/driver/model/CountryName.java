@@ -9,10 +9,9 @@ public enum CountryName {
 
     private final String code;
 
-    private CountryName(String s) {
+    CountryName(String s) {
         code = s;
     }
-
     public String toCode() {
         return this.code;
     }
