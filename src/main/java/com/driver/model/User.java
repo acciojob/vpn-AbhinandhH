@@ -11,18 +11,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String username;
     private String password;
     private String originalIp;
     private String maskedIp;
     private Boolean connected;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Connection> connectionList;
+    private List<Connection> connectionList = new ArrayList<>();
 
     @ManyToMany
     @JoinColumn
-    private List<ServiceProvider> serviceProviderList;
+    private List<ServiceProvider> serviceProviderList = new ArrayList<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Country originalCountry;

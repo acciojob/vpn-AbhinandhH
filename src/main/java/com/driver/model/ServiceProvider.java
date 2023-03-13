@@ -28,17 +28,17 @@ public class ServiceProvider {
     @OneToMany(mappedBy = "serviceProvider", cascade = CascadeType.ALL)
     List<Country> countryList = new ArrayList<>();
 
-    public ServiceProvider() {
-    }
-
-    public ServiceProvider(int id, String name, Admin admin, List<Connection> connectionList, List<User> users, List<Country> countryList) {
-        this.id = id;
-        this.name = name;
-        this.admin = admin;
-        this.connectionList = connectionList;
-        this.users = users;
-        this.countryList = countryList;
-    }
+//    public ServiceProvider() {
+//    }
+//
+//    public ServiceProvider(int id, String name, Admin admin, List<Connection> connectionList, List<User> users, List<Country> countryList) {
+//        this.id = id;
+//        this.name = name;
+//        this.admin = admin;
+//        this.connectionList = connectionList;
+//        this.users = users;
+//        this.countryList = countryList;
+//    }
 
     public int getId() {
         return id;
